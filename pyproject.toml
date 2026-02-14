@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "animatic-builder"
+version = "0.1.0"
+description = "Lightweight shot-based animatic builder"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+animatic-builder = "animatic_builder.app:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
